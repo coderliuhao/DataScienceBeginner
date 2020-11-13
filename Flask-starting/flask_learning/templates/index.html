@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ 
+    <form method = "post">
+        {{ form.csrf_token() }}
+        {{ form.username.label }}
+        <p>{{ form.username }}</p>
+        {{ form.password.label }}
+        <p>{{ form.password }}</p>
+        {{ form.password1.label}}
+        <p>{{ form.password1 }}</p>
+        <p>{{ form.submit()}}</p>
+        {% for x in get_flashed_messages() %}
+            {{ x }}
+        {% endfor %}
+    </form>
+</body>
+</html>
+
+
+ 
